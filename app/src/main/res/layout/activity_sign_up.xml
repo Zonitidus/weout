@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SignUpActivity"
+    tools:layout_editor_absoluteX="-5dp"
+    tools:layout_editor_absoluteY="-38dp">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="-37dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/phoneET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="91dp"
+                android:ems="10"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneTV" />
+
+            <EditText
+                android:id="@+id/passwordConfirmET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="91dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordConfirmTV" />
+
+            <EditText
+                android:id="@+id/birthDayET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="91dp"
+                android:ems="10"
+                android:hint="dd-mm-aaaa"
+                android:inputType="date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/birthDayTV" />
+
+            <TextView
+                android:id="@+id/passwordSignupTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="229dp"
+                android:text="Contraseña"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailSignupET" />
+
+            <EditText
+                android:id="@+id/passwordSignupET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="91dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordSignupTV" />
+
+            <EditText
+                android:id="@+id/emailSignupET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="91dp"
+                android:ems="10"
+                android:hint="1234@example.com"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailSignupTV" />
+
+            <TextView
+                android:id="@+id/emailSignupTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="186dp"
+                android:text="Correo electrónico"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastNameET" />
+
+            <EditText
+                android:id="@+id/lastNameET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="91dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastNameTV" />
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="251dp"
+                android:text="Nombre"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lastNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="251dp"
+                android:text="Apellido"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameET" />
+
+            <TextView
+                android:id="@+id/birthDayTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="171dp"
+                android:text="Fecha de nacimiento"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordConfirmET" />
+
+            <TextView
+                android:id="@+id/passwordConfirmTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="165dp"
+                android:text="Confirmar contraseña"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordSignupET" />
+
+            <TextView
+                android:id="@+id/genderTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="256dp"
+                android:text="Genero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/birthDayET" />
+
+            <TextView
+                android:id="@+id/phoneTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="168dp"
+                android:text="Teléfono de contacto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/maleGenderBtn" />
+
+            <EditText
+                android:id="@+id/nameET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="91dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameTV" />
+
+            <Button
+                android:id="@+id/maleGenderBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="18dp"
+                android:text="Masculino"
+                app:layout_constraintEnd_toStartOf="@+id/femaleGenderBtn"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/genderTV" />
+
+            <Button
+                android:id="@+id/femaleGenderBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:text="Femenino"
+                app:layout_constraintEnd_toStartOf="@+id/otherGenderBtn"
+                app:layout_constraintStart_toEndOf="@+id/maleGenderBtn"
+                app:layout_constraintTop_toBottomOf="@+id/genderTV" />
+
+            <Button
+                android:id="@+id/otherGenderBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:text="Otro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/femaleGenderBtn"
+                app:layout_constraintTop_toBottomOf="@+id/genderTV" />
+
+            <Button
+                android:id="@+id/signUpBtn"
+                android:layout_width="170dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="112dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="110dp"
+                android:text="Registrarme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneET" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
