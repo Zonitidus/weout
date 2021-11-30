@@ -1,6 +1,7 @@
 package edu.co.icesi.weout.activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -32,16 +33,17 @@ class SignUpActivity : AppCompatActivity() {
 
         binding.signUpBtn.setOnClickListener(::register)
 
+        //Estos métodos son para cambiar el color de un boton al ser seleccionado
         binding.femaleGenderBtn.setOnClickListener {
             this.userGender = binding.femaleGenderBtn.text.toString()
             binding.maleGenderBtn.setBackgroundColor(R.color.purple_700)
-            binding.femaleGenderBtn.setBackgroundColor(R.color.purple_200)
+            binding.femaleGenderBtn.setBackgroundColor(R.color.black)
             binding.otherGenderBtn.setBackgroundColor(R.color.purple_700)
         }
 
         binding.maleGenderBtn.setOnClickListener{
             this.userGender = binding.maleGenderBtn.text.toString()
-            binding.maleGenderBtn.setBackgroundColor(R.color.purple_200)
+            binding.maleGenderBtn.setBackgroundColor(R.color.black)
             binding.femaleGenderBtn.setBackgroundColor(R.color.purple_700)
             binding.otherGenderBtn.setBackgroundColor(R.color.purple_700)
         }
@@ -50,52 +52,61 @@ class SignUpActivity : AppCompatActivity() {
             this.userGender = binding.otherGenderBtn.text.toString()
             binding.maleGenderBtn.setBackgroundColor(R.color.purple_700)
             binding.femaleGenderBtn.setBackgroundColor(R.color.purple_700)
-            binding.otherGenderBtn.setBackgroundColor(R.color.purple_200)
+            binding.otherGenderBtn.setBackgroundColor(R.color.black)
         }
     }
 
     private fun register(view : View){
+        var password1 = binding.passwordSignupET.text.toString()
+        var password2 = binding.passwordConfirmET.text.toString()
 
-        if(userGender.equals("null")){
-            Toast.makeText(this, "Por favor, escoge un género", Toast.LENGTH_LONG).show()
+        if(password1 != password2){
+            Toast.makeText(this, "Las contraseñas deben ser iguales", Toast.LENGTH_LONG).show()
         }else{
-            //1. Registrar usuario en la db
-            Firebase.auth.createUserWithEmailAndPassword(
+            if(userGender.equals("null")){
+                Toast.makeText(this, "Por favor, escoge un género", Toast.LENGTH_LONG).show()
+            }else{
+                //1. Registrar usuario en la db
+                Firebase.auth.createUserWithEmailAndPassword(
 
-                binding.emailSignupET.text.toString(),
-                binding.passwordSignupET.text.toString()
-
-            ).addOnSuccessListener {
-                //2. Registrar todos los datos
-
-                val id = Firebase.auth.currentUser?.uid
-
-                /*var birthDate : Long = 0
-
-                var birthDateString = binding.birthDayET.text.toString()
-
-                var format1 = SimpleDateFormat("dd-MM-yyyy")
-
-                var date = format1.parse(birthDateString)*/
-
-                val user = User(
-                    id!!,
-                    binding.nameET.text.toString(),
-                    binding.lastNameET.text.toString(),
                     binding.emailSignupET.text.toString(),
-                    binding.birthDayET.text.toString(),
-                    userGender,
-                    binding.phoneET.text.toString()
-                )
+                    binding.passwordSignupET.text.toString()
 
-                Firebase.firestore.collection("users").document(id).set(user).addOnSuccessListener {
-                    sendVerificationEmail()
-                    finish()                }
+                ).addOnSuccessListener {
+                    //2. Registrar todos los datos
 
-            }.addOnFailureListener{
-                Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                    val id = Firebase.auth.currentUser?.uid
+
+                    /*var birthDate : Long = 0
+
+                    var birthDateString = binding.birthDayET.text.toString()
+
+                    var format1 = SimpleDateFormat("dd-MM-yyyy")
+
+                    var date = format1.parse(birthDateString)*/
+
+                    val user = User(
+                        id!!,
+                        binding.nameET.text.toString(),
+                        binding.lastNameET.text.toString(),
+                        binding.emailSignupET.text.toString(),
+                        binding.birthDayET.text.toString(),
+                        userGender,
+                        binding.phoneET.text.toString()
+                    )
+
+                    Firebase.firestore.collection("users").document(id).set(user).addOnSuccessListener {
+                        sendVerificationEmail()
+                        startActivity(Intent(this, EmailLoginActivity::class.java))
+                        finish()                }
+
+                }.addOnFailureListener{
+                    Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                }
             }
         }
+
+
 
     }
 
