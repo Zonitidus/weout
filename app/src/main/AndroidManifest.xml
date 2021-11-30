@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeOut">
         <activity
+            android:name=".activities.HomeActivity"
+            android:exported="true" />
+        <activity
             android:name=".activities.FirebaseLoginActivity"
             android:exported="true" />
         <activity

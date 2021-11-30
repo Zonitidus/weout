@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeItem"
+        android:icon="@drawable/home_icon"
+        android:title="Home" />
+    <item
+        android:id="@+id/notificationItem"
+        android:icon="@drawable/notification_icon"
+        android:title="Notificaciones" />
+    <item
+        android:id="@+id/publishItem"
+        android:icon="@drawable/publish_icon"
+        android:title="Publicar" />
+    <item
+        android:id="@+id/accountItem"
+        android:icon="@drawable/account_icon"
+        android:title="Cuenta" />
+    <item
+        android:id="@+id/otherItem"
+        android:icon="@drawable/other_icon"
+        android:title="Otros" />
+</menu>
