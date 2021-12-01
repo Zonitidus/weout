@@ -20,7 +20,6 @@ class PostEventFragment : Fragment() {
         _binding = FragmentPostEventBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        
 
         return view
     }

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/grid1"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/add_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/grid2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="36dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/add_image"
+        app:layout_constraintBottom_toBottomOf="@+id/grid1"
+        app:layout_constraintStart_toEndOf="@+id/grid1"
+        app:layout_constraintTop_toTopOf="@+id/grid1" />
+
+    <ImageButton
+        android:id="@+id/grid3"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="36dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/add_image"
+        app:layout_constraintBottom_toBottomOf="@+id/grid2"
+        app:layout_constraintStart_toEndOf="@+id/grid2"
+        app:layout_constraintTop_toTopOf="@+id/grid2" />
+
+    <ImageButton
+        android:id="@+id/grid4"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/add_image"
+        app:layout_constraintStart_toStartOf="@+id/grid1"
+        app:layout_constraintTop_toBottomOf="@+id/grid1" />
+
+    <ImageButton
+        android:id="@+id/grid5"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="36dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/add_image"
+        app:layout_constraintBottom_toBottomOf="@+id/grid4"
+        app:layout_constraintStart_toEndOf="@+id/grid4"
+        app:layout_constraintTop_toTopOf="@+id/grid4" />
+
+    <ImageButton
+        android:id="@+id/grid6"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="36dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/add_image"
+        app:layout_constraintBottom_toBottomOf="@+id/grid5"
+        app:layout_constraintStart_toEndOf="@+id/grid5"
+        app:layout_constraintTop_toTopOf="@+id/grid5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
