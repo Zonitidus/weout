@@ -3,6 +3,8 @@ package edu.co.icesi.weout.activities
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import edu.co.icesi.weout.R
 import edu.co.icesi.weout.databinding.ActivityHomeBinding
@@ -11,7 +13,6 @@ import edu.co.icesi.weout.fragments.PostEventFragment
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
-
     private lateinit var postEventFragment: PostEventFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,15 +23,6 @@ class HomeActivity : AppCompatActivity() {
 
         this.postEventFragment  = PostEventFragment.newInstance()
 
-        val sharedPreferences = this.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-
-        editor.apply{
-            putString("user", "siteName")
-            putString("userId", "imageUri")
-        }.apply()
-
-
         binding.bottomNavigationView.setOnItemSelectedListener {
                 menuItem ->
             if(menuItem.itemId == R.id.publishItem) {
@@ -38,7 +30,7 @@ class HomeActivity : AppCompatActivity() {
             }
             true
         }
-        //this.showFragment(homefragment)
+        this.showFragment(postEventFragment)
     }
 
     fun showFragment(fragment: Fragment){

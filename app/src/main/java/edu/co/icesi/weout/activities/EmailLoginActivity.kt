@@ -41,7 +41,7 @@ class EmailLoginActivity : AppCompatActivity() {
                         val user = it.toObject(User::class.java)
                         //Guardamos el usuario en shared preferencies
                         saveUser(user!!)
-                        startActivity(Intent(this, ParcialHomeActivity::class.java))
+                        startActivity(Intent(this, HomeActivity::class.java))
                         finish()
                     }
 
@@ -58,11 +58,8 @@ class EmailLoginActivity : AppCompatActivity() {
     }
 
     fun saveUser(user : User){
-
         val sp = getSharedPreferences("user", MODE_PRIVATE)
-        val json = Gson().toJson(user)
-        sp.edit().putString("user", json).apply()
-
+        sp.edit().putString("userId", user.id).apply()
     }
 
 }
