@@ -147,15 +147,15 @@ class PostEventFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePi
 
         val coords = ""
 
-       /*val post = user?.let {
+       val post = user?.let {
             Post(UUID.randomUUID().toString(), it, eventName, eventCategory,
                 photoArray, eventDescription, eventPrice.toDouble(), minimumAge.toInt(), date,
                 System.currentTimeMillis().toString(), address, extraInfo, coords)
-        }*/
+        }
 
-        val post: Post? = user?.let { Post(UUID.randomUUID().toString(), it, "Nombre evento", "Deporte",
+        /*val post: Post? = user?.let { Post(UUID.randomUUID().toString(), it, "Nombre evento", "Deporte",
             photoArray, "Descripción", 10.0, 18, "fecha", System.currentTimeMillis().toString(),
-            "dirección", "apto704", "coordenadas") }
+            "dirección", "apto704", "coordenadas") }*/
 
         if (post != null) {
             this.makePost(post)
@@ -196,6 +196,11 @@ class PostEventFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePi
     @SuppressLint("ResourceType")
     private fun handleImage(view: View){
         val img = view as ImageButton
+
+        val idString: String = view.getResources().getResourceEntryName(view.getId())
+        this.currentImage =idString
+
+
         Toast.makeText((activity as HomeActivity), "Grid id: ${img.id}", Toast.LENGTH_LONG).show()
 
 

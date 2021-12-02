@@ -39,7 +39,7 @@ class PostsListFragment : Fragment() {
 
         binding = FragmentPostsListBinding.inflate(inflater, container, false)
 
-        binding.testView.text = "AAAAAAAAAAAAAAAAAAAAAA"
+        binding.testView.text = "Eventos"
 
         val recycler = binding.postsRecyclerView
 
