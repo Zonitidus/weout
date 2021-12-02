@@ -13,7 +13,7 @@ import edu.co.icesi.weout.recycler.promociones.PromocionesAdapter
 import edu.co.icesi.weout.recycler.recomendado.RecomendadoAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 
-class homeFragment : Fragment() {
+class HomeFragment : Fragment() {
 
     private lateinit var layoutManagerVertical: LinearLayoutManager
     private lateinit var layoutManagerHorizontal: LinearLayoutManager
@@ -34,15 +34,6 @@ class homeFragment : Fragment() {
         layoutManagerHorizontal = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         layoutManagerVertical = LinearLayoutManager(activity)
 
-        promocionesRecycler.layoutManager = layoutManagerHorizontal
-        promocionesRecycler.setHasFixedSize(true)
-        categoriasRecycler.layoutManager = layoutManagerHorizontal
-        categoriasRecycler.setHasFixedSize(true)
-        recomendadoRecycler.layoutManager = layoutManagerVertical
-        recomendadoRecycler.setHasFixedSize(true)
-        expandedRecycler.layoutManager = layoutManagerVertical
-        expandedRecycler.setHasFixedSize(false)
-
         promocionesAdapter = PromocionesAdapter()
         categoriaAdapter = CategoriaAdapter()
         recomendadoAdapter = RecomendadoAdapter()
@@ -53,7 +44,22 @@ class homeFragment : Fragment() {
         recomendadoRecycler.adapter = recomendadoAdapter
         expandedRecycler.adapter = expandedAdapter
 
+        promocionesRecycler.layoutManager = layoutManagerHorizontal
+        promocionesRecycler.setHasFixedSize(true)
+        categoriasRecycler.layoutManager = layoutManagerHorizontal
+        categoriasRecycler.setHasFixedSize(true)
+        recomendadoRecycler.layoutManager = layoutManagerVertical
+        recomendadoRecycler.setHasFixedSize(true)
+        expandedRecycler.layoutManager = layoutManagerVertical
+        expandedRecycler.setHasFixedSize(false)
+
         return vista
         //return super.onCreateView(inflater, container, savedInstanceState)
+    }
+
+
+    companion object {
+        @JvmStatic
+        fun newInstance() = HomeFragment()
     }
 }

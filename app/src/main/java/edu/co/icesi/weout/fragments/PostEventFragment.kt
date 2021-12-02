@@ -8,39 +8,22 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import com.google.common.io.Files.getFileExtension
+import androidx.fragment.app.Fragment
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import edu.co.icesi.weout.R
 import edu.co.icesi.weout.activities.HomeActivity
 import edu.co.icesi.weout.databinding.FragmentPostEventBinding
 import edu.co.icesi.weout.model.Post
 import java.util.*
 import kotlin.collections.ArrayList
-import android.widget.Toast
-
-import edu.co.icesi.weout.activities.MainActivity
-
-import androidx.annotation.NonNull
-
-import com.google.android.gms.tasks.OnFailureListener
-
-import com.google.firebase.storage.UploadTask
-
-import android.graphics.ColorSpace.Model
-
-import com.google.android.gms.tasks.OnSuccessListener
-import com.google.android.gms.tasks.Task
-import com.google.firebase.storage.OnProgressListener
 
 
 class PostEventFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
@@ -188,8 +171,11 @@ class PostEventFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePi
 
     @SuppressLint("ResourceType")
     private fun handleImage(view: View){
-        val img = view as ImageButton
-        Toast.makeText((activity as HomeActivity), "Grid id: ${img.id}", Toast.LENGTH_LONG).show()
+
+        val idString: String = view.getResources().getResourceEntryName(view.getId())
+        this.currentImage =idString
+
+        Toast.makeText((activity as HomeActivity), "Grid id: $idString", Toast.LENGTH_LONG).show()
 
 
         val intent = Intent(Intent.ACTION_GET_CONTENT)
@@ -201,6 +187,10 @@ class PostEventFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePi
         if(result.resultCode == RESULT_OK){
             val uriImage = result.data?.data
             uriImage?.let{
+
+
+
+
                 if(this.currentImage == "grid1"){
                     binding.imageGrid.grid1.setImageURI(it)
                 }else if(this.currentImage == "grid2"){

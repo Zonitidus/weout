@@ -8,12 +8,15 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import edu.co.icesi.weout.R
 import edu.co.icesi.weout.databinding.ActivityHomeBinding
+import edu.co.icesi.weout.fragments.HomeFragment
 import edu.co.icesi.weout.fragments.PostEventFragment
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
+
     private lateinit var postEventFragment: PostEventFragment
+    private lateinit var homeFragment: HomeFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,11 +25,14 @@ class HomeActivity : AppCompatActivity() {
         setContentView(view)
 
         this.postEventFragment  = PostEventFragment.newInstance()
+        this.homeFragment = HomeFragment.newInstance()
 
         binding.bottomNavigationView.setOnItemSelectedListener {
                 menuItem ->
             if(menuItem.itemId == R.id.publishItem) {
                 showFragment(postEventFragment)
+            }else if(menuItem.itemId == R.id.homeItem) {
+                showFragment(homeFragment)
             }
             true
         }
