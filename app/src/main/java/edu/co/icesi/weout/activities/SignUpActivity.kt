@@ -26,6 +26,8 @@ class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        setTitle("Registrarme");
+
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         val view = binding.root
 

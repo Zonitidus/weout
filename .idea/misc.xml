@@ -28,10 +28,11 @@
         <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/recomendador_row.xml" value="0.1773049645390071" />
         <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/menu/menu_registered.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/drawable/shape.xml" value="0.11944444444444445" />
+        <entry key="app/src/main/res/drawable/textield.xml" value="0.11944444444444445" />
         <entry key="app/src/main/res/layout/activity_email_login.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
         <entry key="app/src/main/res/layout/post_row.xml" value="0.1" />
       </map>
     </option>
