@@ -20,11 +20,14 @@ class PostInfoActivity : AppCompatActivity() {
 
         val post = intent.extras?.get("post") as Post
 
-        Glide.with(binding.root)
-            .load(post.photos[0])
-            .centerCrop()
-            .placeholder(0)
-            .into(binding.imagenInfo)
+        if (post.photos[0] != null) {
+            Glide.with(binding.root)
+                .load(post.photos[0])
+                .centerCrop()
+                .placeholder(0)
+                .into(binding.imagenInfo)
+        }
+
 
         binding.categoryPostTV.text = post.category.toString()
         binding.descripcionPostTV.text = post.description.toString()
@@ -49,6 +52,11 @@ class PostInfoActivity : AppCompatActivity() {
         binding.editarPostTV.setOnClickListener{
             //si
             //TODO
+        }
+
+
+        binding.volver1Btn.setOnClickListener{
+            finish()
         }
     }
 }
