@@ -7,40 +7,31 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import edu.co.icesi.weout.R
+import edu.co.icesi.weout.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private var _binding : ActivityMainBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        requestPermissions(arrayOf(
-            Manifest.permission.INTERNET
-        ), 1)
-    }
+        _binding = ActivityMainBinding.inflate(layoutInflater)
 
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        val view = binding.root
 
-        if(requestCode == 1){
+        setContentView(view)
 
-            var allGrant = true
+        binding.logoIV.setOnClickListener {
 
-            for(result in grantResults){
-                if(result == PackageManager.PERMISSION_DENIED)
-                    allGrant = false
-            }
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
 
-            if (allGrant){
-                val intent = Intent(this, FirebaseLoginActivity::class.java)
-                startActivity(intent)
-                finish()
-            }else{
-                Toast.makeText(this, "Por favor acepte los permisos para continuar.", Toast.LENGTH_LONG)
-            }
         }
+
     }
+
+
 }

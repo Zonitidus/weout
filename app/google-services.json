@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1066877499354",
+    "project_id": "weout-582de",
+    "storage_bucket": "weout-582de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066877499354:android:0f5b67c54b4df7327bf2e3",
+        "android_client_info": {
+          "package_name": "edu.co.icesi.weout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066877499354-occvvpjsi2edpqhcb8g1uvm36824qmkc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNkMjLMsyK0AcxDhs04WxCodkkxqVVskE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066877499354-occvvpjsi2edpqhcb8g1uvm36824qmkc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

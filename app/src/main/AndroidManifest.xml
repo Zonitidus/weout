@@ -13,7 +13,16 @@
             android:name=".activities.HomeActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.FirebaseLoginActivity"
+            android:name=".activities.ParcialHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SignUpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.EmailLoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.LoginActivity"
             android:exported="true" />
         <activity
             android:name=".activities.MainActivity"
