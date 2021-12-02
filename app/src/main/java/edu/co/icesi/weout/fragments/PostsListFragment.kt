@@ -56,6 +56,8 @@ class PostsListFragment : Fragment() {
 
             if (it.result?.size() != 0) {
 
+                adapter.clear()
+
                 for (document in it.result!!) {
 
                     var post = document.toObject(Post::class.java)
