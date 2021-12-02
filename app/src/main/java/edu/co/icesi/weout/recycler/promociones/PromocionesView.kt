@@ -8,4 +8,10 @@ import edu.co.icesi.weout.R
 class PromocionesView(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     var imageRow: ImageButton = itemView.findViewById(R.id.imagenBtnP)
+
+    init {
+        imageRow.setOnClickListener {
+
+        }
+    }
 }
