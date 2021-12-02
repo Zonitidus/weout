@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeOut">
         <activity
+            android:name=".activities.publicacionActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.PostInfoActivity"
             android:exported="false" />
         <activity
