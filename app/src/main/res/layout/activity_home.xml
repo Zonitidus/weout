@@ -16,6 +16,7 @@
         app:menu="@menu/menu_registered" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragmentContainer"
         android:layout_width="409dp"
         android:layout_height="673dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"

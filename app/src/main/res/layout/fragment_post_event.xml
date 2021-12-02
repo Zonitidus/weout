@@ -152,7 +152,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:text="Button"
+                android:text="Seleccionar fecha"
                 app:layout_constraintBottom_toBottomOf="@+id/dateTextView"
                 app:layout_constraintStart_toEndOf="@+id/textView8"
                 app:layout_constraintTop_toTopOf="@+id/textView8" />
@@ -189,7 +189,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
             <EditText
-                android:id="@+id/addressInfoInput"
+                android:id="@+id/extraInfoInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -207,7 +207,7 @@
                 android:text="Buscar en mapa"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/addressInfoInput" />
+                app:layout_constraintTop_toBottomOf="@+id/extraInfoInput" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
