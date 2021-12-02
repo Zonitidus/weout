@@ -1,8 +1,11 @@
 package edu.co.icesi.weout.activities
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
+import android.view.WindowManager
 import edu.co.icesi.weout.R
 import edu.co.icesi.weout.databinding.ActivityLoginBinding
 
@@ -15,8 +18,15 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         _binding = ActivityLoginBinding.inflate(layoutInflater)
+
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        supportActionBar?.hide()
+
+
         val view = binding.root
         setContentView(view)
+
 
         binding.emailLoginBtn.setOnClickListener {
 
