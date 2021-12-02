@@ -68,6 +68,8 @@ class PostEventFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePi
     var startDate = IntArray(5)
     var address: String = ""
 
+    var url : String = "https://firebasestorage.googleapis.com/v0/b/weout-582de.appspot.com/o/weout.PNG?alt=media&token=56f74d7e-c23d-4739-b535-4fdd45117296"
+
     private fun getTimeCalendar(){
         val cal = Calendar.getInstance()
         day = cal.get(Calendar.DAY_OF_MONTH)
@@ -167,8 +169,13 @@ class PostEventFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePi
         val fileRef:StorageReference = FirebaseStorage.getInstance().reference.child("${System.currentTimeMillis()}${getFileExtension(uri)}")
 
         fileRef.putFile(uri).addOnSuccessListener {
+
+
+
             fileRef.downloadUrl.addOnSuccessListener { uri ->
                 Toast.makeText(activity as HomeActivity, "Uploaded Successfully!!!", Toast.LENGTH_SHORT).show()
+
+
 
                 this.photoArray.add(uri.toString())
             }

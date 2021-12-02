@@ -34,24 +34,24 @@ class homeFragment : Fragment() {
         layoutManagerHorizontal = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         layoutManagerVertical = LinearLayoutManager(activity)
 
-        promocionesRecycler.layoutManager = layoutManagerHorizontal
-        promocionesRecycler.setHasFixedSize(true)
-        categoriasRecycler.layoutManager = layoutManagerHorizontal
-        categoriasRecycler.setHasFixedSize(true)
-        recomendadoRecycler.layoutManager = layoutManagerVertical
-        recomendadoRecycler.setHasFixedSize(true)
-        expandedRecycler.layoutManager = layoutManagerVertical
-        expandedRecycler.setHasFixedSize(false)
+//        promocionesRecycler.layoutManager = layoutManagerHorizontal
+//        promocionesRecycler.setHasFixedSize(true)
+//        categoriasRecycler.layoutManager = layoutManagerHorizontal
+//        categoriasRecycler.setHasFixedSize(true)
+//        recomendadoRecycler.layoutManager = layoutManagerVertical
+//        recomendadoRecycler.setHasFixedSize(true)
+//        expandedRecycler.layoutManager = layoutManagerVertical
+//        expandedRecycler.setHasFixedSize(false)
 
         promocionesAdapter = PromocionesAdapter()
         categoriaAdapter = CategoriaAdapter()
         recomendadoAdapter = RecomendadoAdapter()
         expandedAdapter = ExpandedAdapter()
 
-        promocionesRecycler.adapter = promocionesAdapter
-        categoriasRecycler.adapter = categoriaAdapter
-        recomendadoRecycler.adapter = recomendadoAdapter
-        expandedRecycler.adapter = expandedAdapter
+//        promocionesRecycler.adapter = promocionesAdapter
+//        categoriasRecycler.adapter = categoriaAdapter
+//        recomendadoRecycler.adapter = recomendadoAdapter
+//        expandedRecycler.adapter = expandedAdapter
 
         return vista
         //return super.onCreateView(inflater, container, savedInstanceState)

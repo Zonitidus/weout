@@ -1,5 +1,7 @@
 package edu.co.icesi.weout.model
 
+import java.io.Serializable
+
 data class Post (
 
     var id: String = "",
@@ -14,5 +16,9 @@ data class Post (
     var postDate: String = "",
     var address: String = "",
     var extraInfo: String = "",
-    var coords: String = ""
-)
+    var coords: String = "",
+) : Serializable {
+    override fun toString(): String {
+        return eventName
+    }
+}
