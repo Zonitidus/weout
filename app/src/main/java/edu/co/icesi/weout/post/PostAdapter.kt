@@ -41,7 +41,7 @@ class PostAdapter : RecyclerView.Adapter<PostViewHolder>() {
         }
         else {
             Glide.with(holder.itemView)
-                .load("https://firebasestorage.googleapis.com/v0/b/weout-582de.appspot.com/o/weout.PNG?alt=media&token=56f74d7e-c23d-4739-b535-4fdd45117296")
+                .load("")
                 .centerCrop()
                 .placeholder(R.drawable.weout)
                 .into(holder.postItemImage)
@@ -63,9 +63,12 @@ class PostAdapter : RecyclerView.Adapter<PostViewHolder>() {
     }
 
     fun addPost(post : Post) {
-
         posts.add(post)
 
+    }
+
+    fun clear() {
+        posts = ArrayList<Post>()
     }
 
 

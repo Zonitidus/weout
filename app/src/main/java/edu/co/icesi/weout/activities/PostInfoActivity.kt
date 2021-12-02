@@ -20,7 +20,8 @@ class PostInfoActivity : AppCompatActivity() {
 
         val post = intent.extras?.get("post") as Post
 
-        if (post.photos[0] != null) {
+
+        if (post.photos.size > 0) {
             Glide.with(binding.root)
                 .load(post.photos[0])
                 .centerCrop()
@@ -35,7 +36,7 @@ class PostInfoActivity : AppCompatActivity() {
         binding.edadPostTV.text = post.age.toString()
         binding.fechaPostTV.text = post.eventDate.toString()
         //binding.gastoPostTV.text = post.
-        var price = binding.precioPostTV.text.toString().toInt()
+        var price = binding.precioPostTV.text.toString().toDouble()
         if (price <= 10000) {
             binding.gastoPostTV.text = "$"
         } else if (price <= 20000) {
