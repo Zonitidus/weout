@@ -6,7 +6,7 @@ import android.os.Bundle
 import edu.co.icesi.weout.R
 import edu.co.icesi.weout.databinding.ActivityLoginBinding
 
-class LoginActivity : AppCompatActivity() {
+open class LoginActivity : AppCompatActivity() {
 
     private var _binding : ActivityLoginBinding? = null
     private val binding get() = _binding!!
@@ -24,6 +24,12 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
 
+        }
+
+        binding.facebookLoginBtn.setOnClickListener {
+            val intent = Intent(this, FacebookAuthActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         binding.signupBtn.setOnClickListener {
