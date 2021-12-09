@@ -43,6 +43,7 @@ class EmailLoginActivity : AppCompatActivity() {
                         saveUser(user!!)
                         startActivity(Intent(this, HomeActivity::class.java))
                         finish()
+                        LoginActivity().finish()
                     }
 
                 }else{

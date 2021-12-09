@@ -11,6 +11,10 @@ import edu.co.icesi.weout.databinding.ActivityHomeBinding
 import edu.co.icesi.weout.fragments.PostEventFragment
 import edu.co.icesi.weout.fragments.PostsListFragment
 
+enum class ProviderType{
+    FACEBOOK
+}
+
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
