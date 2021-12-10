@@ -226,13 +226,13 @@
                 app:layout_constraintTop_toTopOf="@+id/textView19" />
 
             <Button
-                android:id="@+id/editarPostTV"
+                android:id="@+id/mapRedirectBttn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="40dp"
-                android:text="Editar evento"
+                android:text="Ver en mapa"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/volver1Btn"
@@ -246,7 +246,7 @@
                 android:layout_marginStart="52dp"
                 android:text="volver"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/editarPostTV" />
+                app:layout_constraintTop_toTopOf="@+id/mapRedirectBttn" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,7 @@
 package edu.co.icesi.weout.activities
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
@@ -50,14 +52,25 @@ class PostInfoActivity : AppCompatActivity() {
         //binding.organizadorPostTV.text = post.
         binding.precioPostTV.text = post.price.toString()
 
-        binding.editarPostTV.setOnClickListener{
-            //si
-            //TODO
-        }
+        binding.mapRedirectBttn.setOnClickListener{
 
+            val coords = post.coords.split(",").toTypedArray()
+
+            val lat = coords[0]
+            val lng = coords[1]
+
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q=${lat},${lng}&mode=d"))
+            intent.setPackage("com.google.android.apps.maps")
+
+            if(intent.resolveActivity(packageManager) != null){
+                startActivity(intent)
+            }
+        }
 
         binding.volver1Btn.setOnClickListener{
             finish()
         }
+
+
     }
 }

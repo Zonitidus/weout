@@ -37,10 +37,15 @@ import com.google.android.gms.tasks.OnFailureListener
 import com.google.firebase.storage.UploadTask
 
 import android.graphics.ColorSpace.Model
+import android.util.Log
+import androidx.core.content.ContextCompat
 
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.storage.OnProgressListener
+import edu.co.icesi.weout.activities.AdvertiseActivity
+import edu.co.icesi.weout.activities.EventMapActivity
+import java.lang.Exception
 
 
 class PostEventFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
@@ -91,6 +96,12 @@ class PostEventFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePi
         this.setupSpinner()
 
         binding.publishBttn.setOnClickListener(::publish)
+
+        binding.mapBttn.setOnClickListener{
+            val intent = Intent(it.context, EventMapActivity::class.java).apply {
+            }
+            ContextCompat.startActivity(it.context, intent, null)
+        }
 
         binding.dateBttn.setOnClickListener{
             getTimeCalendar()
@@ -145,23 +156,33 @@ class PostEventFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePi
 
         val user = sharedPreferences.getString("userId", "")
 
-        val coords = ""
 
-       val post = user?.let {
-            Post(UUID.randomUUID().toString(), it, eventName, eventCategory,
-                photoArray, eventDescription, eventPrice.toDouble(), minimumAge.toInt(), date,
-                System.currentTimeMillis().toString(), address, extraInfo, coords)
-        }
+        val sharedPreferencesc = requireActivity().getSharedPreferences("coords", Context.MODE_PRIVATE)
+        val lat = sharedPreferencesc.getString("lat", "")
+        val lng = sharedPreferencesc.getString("lng", "")
 
-        /*val post: Post? = user?.let { Post(UUID.randomUUID().toString(), it, "Nombre evento", "Deporte",
-            photoArray, "Descripción", 10.0, 18, "fecha", System.currentTimeMillis().toString(),
-            "dirección", "apto704", "coordenadas") }*/
+        var coords = "${lat}, ${lng}"
+
+        var post: Post? = null
+
+       try{
+           if(lat == "" || lng == ""){
+               throw Exception()
+           }
+
+           post = user?.let {
+               Post(UUID.randomUUID().toString(), it, eventName, eventCategory,
+                   photoArray, eventDescription, eventPrice.toDouble(), minimumAge.toInt(), date,
+                   System.currentTimeMillis().toString(), address, extraInfo, coords)
+           }
+       }catch (e:Exception){
+       }
 
         if (post != null) {
             this.makePost(post)
             Toast.makeText((activity as HomeActivity), "Publicación realizada con éxito", Toast.LENGTH_LONG).show()
         }else{
-            Toast.makeText((activity as HomeActivity), "No pudo realizarse la publicación", Toast.LENGTH_LONG).show()
+            Toast.makeText((activity as HomeActivity), "Por favor rellene todos los campos", Toast.LENGTH_LONG).show()
         }
     }
 
