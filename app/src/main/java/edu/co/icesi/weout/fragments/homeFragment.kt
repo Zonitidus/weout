@@ -8,8 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.co.icesi.weout.R
 import edu.co.icesi.weout.recycler.categoria.CategoriaAdapter
-import edu.co.icesi.weout.recycler.expanded.ExpandedAdapter
-import edu.co.icesi.weout.recycler.promociones.PromocionesAdapter
 import edu.co.icesi.weout.recycler.recomendado.RecomendadoAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -18,10 +16,10 @@ class homeFragment : Fragment() {
     private lateinit var layoutManagerVertical: LinearLayoutManager
     private lateinit var layoutManagerHorizontal: LinearLayoutManager
 
-    private lateinit var promocionesAdapter: PromocionesAdapter
+    //private lateinit var promocionesAdapter: PromocionesAdapter
     private lateinit var categoriaAdapter: CategoriaAdapter
     private lateinit var recomendadoAdapter: RecomendadoAdapter
-    private lateinit var expandedAdapter: ExpandedAdapter
+    //private lateinit var expandedAdapter: ExpandedAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,10 +41,10 @@ class homeFragment : Fragment() {
 //        expandedRecycler.layoutManager = layoutManagerVertical
 //        expandedRecycler.setHasFixedSize(false)
 
-        promocionesAdapter = PromocionesAdapter()
+        //promocionesAdapter = PromocionesAdapter()
         categoriaAdapter = CategoriaAdapter()
         recomendadoAdapter = RecomendadoAdapter()
-        expandedAdapter = ExpandedAdapter()
+      //  expandedAdapter = ExpandedAdapter()
 
 //        promocionesRecycler.adapter = promocionesAdapter
 //        categoriasRecycler.adapter = categoriaAdapter

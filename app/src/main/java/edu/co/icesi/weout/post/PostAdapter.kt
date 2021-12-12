@@ -1,6 +1,7 @@
 package edu.co.icesi.weout.post
 
 import android.content.Intent
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat.startActivity
@@ -10,16 +11,20 @@ import edu.co.icesi.weout.R
 import edu.co.icesi.weout.activities.PostInfoActivity
 import edu.co.icesi.weout.model.Post
 import edu.co.icesi.weout.recycler.PostView
+import java.util.stream.Stream
 
 class PostAdapter : RecyclerView.Adapter<PostViewHolder>() {
 
     private var posts = ArrayList<Post>()
+    private var postsOriginal = ArrayList<Post>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) : PostViewHolder {
 
         val inflater = LayoutInflater.from(parent.context)
         val view = inflater.inflate(R.layout.post_row, parent, false)
         val postViewHolder = PostViewHolder(view)
+
+        postsOriginal.addAll(posts)
 
         return postViewHolder
 
@@ -56,6 +61,26 @@ class PostAdapter : RecyclerView.Adapter<PostViewHolder>() {
 
 
 
+    }
+
+    fun filtrado(s : String) {
+        if(s.length == 0) {
+            posts.clear()
+            posts.addAll(postsOriginal)
+        } else {
+             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                posts.stream().filter {
+                    it.eventName.lowercase().contains(s.lowercase())
+                }
+            } else {
+                for (post in postsOriginal) {
+                    if (post.eventName.lowercase().contains(s.lowercase())) {
+                        posts.add(post)
+                    }
+                }
+            }
+        }
+        notifyDataSetChanged()
     }
 
     override fun getItemCount(): Int {
