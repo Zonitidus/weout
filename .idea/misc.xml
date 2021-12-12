@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mateo/AndroidStudioProjects/weout/app/src/main/res/layout/activity_post_info.xml" value="0.264" />
+        <entry key="..\:/Users/mateo/AndroidStudioProjects/weout/app/src/main/res/layout/fragment_notification.xml" value="0.264" />
+        <entry key="..\:/Users/mateo/AndroidStudioProjects/weout/app/src/main/res/layout/fragment_perfil.xml" value="0.4" />
+        <entry key="..\:/Users/mateo/AndroidStudioProjects/weout/app/src/main/res/layout/post_row.xml" value="0.264" />
         <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/activity_about_us.xml" value="0.3038949275362319" />
         <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/activity_advertise.xml" value="0.29846014492753625" />
         <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/activity_email_login.xml" value="0.36666666666666664" />
