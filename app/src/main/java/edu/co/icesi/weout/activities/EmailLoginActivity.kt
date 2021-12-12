@@ -61,6 +61,7 @@ class EmailLoginActivity : AppCompatActivity() {
     fun saveUser(user : User){
         val sp = getSharedPreferences("user", MODE_PRIVATE)
         sp.edit().putString("userId", user.id).apply()
+        sp.edit().putString("email", user.email.toString()).apply()
     }
 
 }

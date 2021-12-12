@@ -12,7 +12,8 @@ import edu.co.icesi.weout.fragments.PostEventFragment
 import edu.co.icesi.weout.fragments.PostsListFragment
 
 enum class ProviderType{
-    FACEBOOK
+    FACEBOOK,
+    BASIC
 }
 
 class HomeActivity : AppCompatActivity() {
