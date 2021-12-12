@@ -64,7 +64,7 @@ class EventMapActivity : AppCompatActivity(), OnMapReadyCallback {
 
         })
 
-        this.putNewMarker(3.4, -72.0)
+        this.marker = this.putNewMarker(3.4, -72.0)
     }
 
     private fun putNewMarker(lat: Double, lng: Double): Marker {
