@@ -1,9 +1,6 @@
 <resources>
     <string name="app_name">WeOut</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_event_map">EventMapActivity</string>
-
-    <string name="facebook_app_id">403924331516019</string>
-    <string name="fb_login_protocol_scheme">fb403924331516019</string>
 </resources>
