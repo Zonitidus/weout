@@ -63,7 +63,7 @@ class PostsListFragment : Fragment(),  SearchView.OnQueryTextListener {
         categoryRecycler.smoothScrollToPosition(0)
 
 
-        //TODO me esta cargando los eventos en vez de las categorias aaaaaaaaaaaa
+        //TODO me esta cargando los eventos en vez de las categorias aaaaaaaaaaaagit p
         val catQuery = Firebase.firestore.collection("category").get()
         catQuery.addOnCompleteListener {
             if (categoryAdapter.itemCount == 0) {
