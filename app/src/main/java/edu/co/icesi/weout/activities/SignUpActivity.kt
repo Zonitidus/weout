@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import androidx.core.content.res.ResourcesCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
@@ -30,29 +31,30 @@ class SignUpActivity : AppCompatActivity() {
         val view = binding.root
 
         setContentView(view)
+        getSupportActionBar()!!.setTitle("Registrarme")
 
         binding.signUpBtn.setOnClickListener(::register)
 
         //Estos métodos son para cambiar el color de un boton al ser seleccionado
         binding.femaleGenderBtn.setOnClickListener {
             this.userGender = binding.femaleGenderBtn.text.toString()
-            binding.maleGenderBtn.setBackgroundColor(R.color.light_purple)
-            binding.femaleGenderBtn.setBackgroundColor(R.color.orange)
-            binding.otherGenderBtn.setBackgroundColor(R.color.light_purple)
+            binding.maleGenderBtn.background = ResourcesCompat.getDrawable(getResources(), R.drawable.shapelightpurplebutton, null);
+            binding.femaleGenderBtn.background = ResourcesCompat.getDrawable(getResources(), R.drawable.shapepurplebutton, null);
+            binding.otherGenderBtn.background = ResourcesCompat.getDrawable(getResources(), R.drawable.shapelightpurplebutton, null);
         }
 
         binding.maleGenderBtn.setOnClickListener{
             this.userGender = binding.maleGenderBtn.text.toString()
-            binding.maleGenderBtn.setBackgroundColor(R.color.orange)
-            binding.femaleGenderBtn.setBackgroundColor(R.color.light_purple)
-            binding.otherGenderBtn.setBackgroundColor(R.color.light_purple)
+            binding.maleGenderBtn.background = ResourcesCompat.getDrawable(getResources(), R.drawable.shapepurplebutton, null);
+            binding.femaleGenderBtn.background = ResourcesCompat.getDrawable(getResources(), R.drawable.shapelightpurplebutton, null);
+            binding.otherGenderBtn.background = ResourcesCompat.getDrawable(getResources(), R.drawable.shapelightpurplebutton, null)
         }
 
         binding.otherGenderBtn.setOnClickListener{
             this.userGender = binding.otherGenderBtn.text.toString()
-            binding.maleGenderBtn.setBackgroundColor(R.color.light_purple)
-            binding.femaleGenderBtn.setBackgroundColor(R.color.light_purple)
-            binding.otherGenderBtn.setBackgroundColor(R.color.orange)
+            binding.maleGenderBtn.background = ResourcesCompat.getDrawable(getResources(), R.drawable.shapelightpurplebutton, null);
+            binding.femaleGenderBtn.background = ResourcesCompat.getDrawable(getResources(), R.drawable.shapelightpurplebutton, null);
+            binding.otherGenderBtn.background = ResourcesCompat.getDrawable(getResources(), R.drawable.shapepurplebutton, null)
         }
     }
 

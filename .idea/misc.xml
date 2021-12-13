@@ -27,9 +27,12 @@
         <entry key="app/src/main/res/drawable/shapealtbutton.xml" value="0.1046875" />
         <entry key="app/src/main/res/drawable/shapebutton.xml" value="0.14814814814814814" />
         <entry key="app/src/main/res/drawable/shapeedittext.xml" value="0.14814814814814814" />
+        <entry key="app/src/main/res/drawable/shapelightpurplebutton.xml" value="0.14537037037037037" />
+        <entry key="app/src/main/res/drawable/shapepurplebutton.xml" value="0.14537037037037037" />
         <entry key="app/src/main/res/layout/activity_about_us.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_email_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.335" />
       </map>
     </option>
   </component>
