@@ -4,10 +4,10 @@ import android.widget.Button
 import java.io.Serializable
 
 data class Categoria (
-    var category: String = "",
+    var categoria: String = "",
 ) : Serializable {
     override fun toString(): String {
-        return category
+        return categoria
     }
 }
 

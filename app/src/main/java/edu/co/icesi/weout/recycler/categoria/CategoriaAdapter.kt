@@ -1,6 +1,7 @@
 package edu.co.icesi.weout.recycler.categoria
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -12,6 +13,8 @@ import edu.co.icesi.weout.model.Post
 class CategoriaAdapter : RecyclerView.Adapter<CategoriaView>() {
 
     private val categorias = ArrayList<Categoria>()
+    var categoria : Categoria? = null
+    var listener: OnCategoryChanged? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoriaView {
         var inflater = LayoutInflater.from(parent.context)
@@ -23,12 +26,22 @@ class CategoriaAdapter : RecyclerView.Adapter<CategoriaView>() {
 
     override fun onBindViewHolder(holder: CategoriaView, position: Int) {
         val category = categorias[position]
+        holder.categoria = category
+        holder.btn.text = category.categoria
+        categoria = category!!
 
-        holder.btn.text = category.category
+
 
         holder.itemView.setOnClickListener {
-            //TODO como mando la info? ???
+            categoria?.let {
+                listener?.categoryChange(it)
+            }
         }
+    }
+
+
+    interface OnCategoryChanged {
+        fun categoryChange(cat : Categoria)
     }
 
 

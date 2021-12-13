@@ -9,5 +9,6 @@ import edu.co.icesi.weout.R
 
 class CategoriaView(itemView: View) : RecyclerView.ViewHolder(itemView) {
     var btn: TextView = itemView.findViewById(R.id.button)
+    var categoria : Categoria? = null
 
 }

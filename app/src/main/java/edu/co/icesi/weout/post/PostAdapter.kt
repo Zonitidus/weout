@@ -2,6 +2,7 @@ package edu.co.icesi.weout.post
 
 import android.content.Intent
 import android.os.Build
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat.startActivity
@@ -11,7 +12,10 @@ import edu.co.icesi.weout.R
 import edu.co.icesi.weout.activities.PostInfoActivity
 import edu.co.icesi.weout.model.Post
 import edu.co.icesi.weout.recycler.PostView
+import edu.co.icesi.weout.recycler.categoria.Categoria
+import java.util.*
 import java.util.stream.Stream
+import kotlin.collections.ArrayList
 
 class PostAdapter : RecyclerView.Adapter<PostViewHolder>() {
 
@@ -63,24 +67,12 @@ class PostAdapter : RecyclerView.Adapter<PostViewHolder>() {
 
     }
 
-    fun filtrado(s : String) {
-        if(s.length == 0) {
-            posts.clear()
-            posts.addAll(postsOriginal)
-        } else {
-             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                posts.stream().filter {
-                    it.eventName.lowercase().contains(s.lowercase())
-                }
-            } else {
-                for (post in postsOriginal) {
-                    if (post.eventName.lowercase().contains(s.lowercase())) {
-                        posts.add(post)
-                    }
-                }
-            }
-        }
+
+
+    fun setPost(postss : ArrayList<Post>){
+        posts = postss
         notifyDataSetChanged()
+        Log.e(">>>", "cargados los post")
     }
 
     override fun getItemCount(): Int {
@@ -95,6 +87,8 @@ class PostAdapter : RecyclerView.Adapter<PostViewHolder>() {
     fun clear() {
         posts = ArrayList<Post>()
     }
+
+
 
 
 }

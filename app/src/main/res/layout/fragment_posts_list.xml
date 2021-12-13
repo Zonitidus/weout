@@ -33,17 +33,21 @@
         app:layout_constraintTop_toBottomOf="@+id/search" />
 
     <!-- Search -->
-    <SearchView
+    <EditText
         android:id="@+id/search"
-        android:layout_width="328dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="35dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/search"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/srchBtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/Eventos"
@@ -54,5 +58,17 @@
         android:text="Eventos"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/categoriasRecycler" />
+
+    <Button
+        android:id="@+id/srchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="Buscar"
+        app:layout_constraintBottom_toBottomOf="@+id/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/search" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
