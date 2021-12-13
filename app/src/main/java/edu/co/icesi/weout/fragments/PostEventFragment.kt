@@ -123,7 +123,7 @@ class PostEventFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePi
 
     private fun setupSpinner(){
 
-        this.states = listOf<String>("Concierto", "Deporte", "Bar", "Comida", "Cultura")
+        this.states = listOf<String>("fiestas", "obras", "bares", "mascotas", "cultural", "restaurantes", "discotecas")
         val adapter =  ArrayAdapter((activity as HomeActivity), android.R.layout.simple_spinner_dropdown_item, states)
         binding.categorySpinner.adapter = adapter
 

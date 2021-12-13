@@ -1,12 +1,14 @@
 package edu.co.icesi.weout.recycler.categoria
 
 import android.widget.Button
+import java.io.Serializable
 
-class Categoria {
-    var category: Button
-
-    constructor(category: Button) {
-        this.category = category
+data class Categoria (
+    var categoria: String = "",
+) : Serializable {
+    override fun toString(): String {
+        return categoria
     }
-
 }
+
+

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+
         <entry key="..\:/Users/mateo/AndroidStudioProjects/weout/app/src/main/res/layout/activity_liked_posts.xml" value="0.5115303983228512" />
         <entry key="..\:/Users/mateo/AndroidStudioProjects/weout/app/src/main/res/layout/activity_my_post_list.xml" value="0.23278985507246377" />
         <entry key="..\:/Users/mateo/AndroidStudioProjects/weout/app/src/main/res/layout/activity_post_info.xml" value="0.264" />
@@ -27,6 +28,38 @@
         <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/fragment_posts_list.xml" value="0.49583333333333335" />
         <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/image_grid.xml" value="0.33" />
         <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/menu/menu_registered.xml" value="0.33" />
+
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2833333333333333" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/drawable/account_icon.xml" value="0.2833333333333333" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/drawable/categories_bar.xml" value="0.2833333333333333" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/drawable/home_icon.xml" value="0.29375" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2833333333333333" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/drawable/notification_icon.xml" value="0.2833333333333333" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/drawable/other_icon.xml" value="0.2833333333333333" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/drawable/search.xml" value="0.29375" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/activity_advertise.xml" value="0.21603260869565216" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/activity_event_map.xml" value="0.21603260869565216" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/activity_firebase_login.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/activity_login.xml" value="0.2557291666666667" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/activity_main.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/activity_parcial_home.xml" value="0.2557291666666667" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/activity_post_info.xml" value="0.2557291666666667" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/activity_publicacion.xml" value="0.2557291666666667" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/activity_sign_up.xml" value="0.2557291666666667" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/activity_support.xml" value="0.21603260869565216" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/categoria_row.xml" value="0.5" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/expanded_row.xml" value="0.33" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/fragment_home.xml" value="0.2557291666666667" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/fragment_post.xml" value="0.3452566096423017" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/fragment_post_event.xml" value="0.21603260869565216" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/fragment_posts_list.xml" value="0.33" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/image_grid.xml" value="0.2557291666666667" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/post_row.xml" value="0.21603260869565216" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/promocion_row.xml" value="0.5" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/recomendado_row.xml" value="0.22" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/layout/recomendador_row.xml" value="0.1773049645390071" />
+        <entry key="..\:/Users/Sebastian/AndroidStudioProjects/weout/app/src/main/res/menu/menu_registered.xml" value="0.27708333333333335" />
       </map>
     </option>
   </component>
