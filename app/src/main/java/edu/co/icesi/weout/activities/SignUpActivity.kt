@@ -36,23 +36,23 @@ class SignUpActivity : AppCompatActivity() {
         //Estos métodos son para cambiar el color de un boton al ser seleccionado
         binding.femaleGenderBtn.setOnClickListener {
             this.userGender = binding.femaleGenderBtn.text.toString()
-            binding.maleGenderBtn.setBackgroundColor(R.color.purple_700)
-            binding.femaleGenderBtn.setBackgroundColor(R.color.black)
-            binding.otherGenderBtn.setBackgroundColor(R.color.purple_700)
+            binding.maleGenderBtn.setBackgroundColor(R.color.light_purple)
+            binding.femaleGenderBtn.setBackgroundColor(R.color.orange)
+            binding.otherGenderBtn.setBackgroundColor(R.color.light_purple)
         }
 
         binding.maleGenderBtn.setOnClickListener{
             this.userGender = binding.maleGenderBtn.text.toString()
-            binding.maleGenderBtn.setBackgroundColor(R.color.black)
-            binding.femaleGenderBtn.setBackgroundColor(R.color.purple_700)
-            binding.otherGenderBtn.setBackgroundColor(R.color.purple_700)
+            binding.maleGenderBtn.setBackgroundColor(R.color.orange)
+            binding.femaleGenderBtn.setBackgroundColor(R.color.light_purple)
+            binding.otherGenderBtn.setBackgroundColor(R.color.light_purple)
         }
 
         binding.otherGenderBtn.setOnClickListener{
             this.userGender = binding.otherGenderBtn.text.toString()
-            binding.maleGenderBtn.setBackgroundColor(R.color.purple_700)
-            binding.femaleGenderBtn.setBackgroundColor(R.color.purple_700)
-            binding.otherGenderBtn.setBackgroundColor(R.color.black)
+            binding.maleGenderBtn.setBackgroundColor(R.color.light_purple)
+            binding.femaleGenderBtn.setBackgroundColor(R.color.light_purple)
+            binding.otherGenderBtn.setBackgroundColor(R.color.orange)
         }
     }
 
