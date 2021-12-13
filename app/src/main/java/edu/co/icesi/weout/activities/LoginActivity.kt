@@ -22,6 +22,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import edu.co.icesi.weout.R
 import edu.co.icesi.weout.databinding.ActivityLoginBinding
+import edu.co.icesi.weout.model.User
 
 open class LoginActivity : AppCompatActivity() {
 
@@ -76,6 +77,7 @@ open class LoginActivity : AppCompatActivity() {
 
                             if (it.isSuccessful){
                                 showHome(it.result?.user?.email  ?: "", ProviderType.FACEBOOK)
+                                finish()
                             }else{
                                 showAlert(3)
                             }
@@ -182,10 +184,12 @@ open class LoginActivity : AppCompatActivity() {
 
     private fun showHome(email:String, provider : ProviderType){
 
-        val homeIntent = Intent(this, HomeActivity::class.java).apply {
-            putExtra("email", email)
-            putExtra("provider", provider.name)
-        }
+        val homeIntent = Intent(this, HomeActivity::class.java)
+
+        val sp = getSharedPreferences("user", MODE_PRIVATE)
+        sp.edit().putString("provider", provider.name).apply()
+        sp.edit().putString("email", email).apply()
+
         startActivity(homeIntent)
     }
 

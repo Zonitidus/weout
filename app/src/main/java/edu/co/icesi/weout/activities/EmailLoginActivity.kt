@@ -40,7 +40,7 @@ class EmailLoginActivity : AppCompatActivity() {
                     Firebase.firestore.collection("users").document(fbuser.uid).get().addOnSuccessListener {
                         val user = it.toObject(User::class.java)
                         //Guardamos el usuario en shared preferencies
-                        saveUser(user!!)
+                        saveUser(user!!, ProviderType.BASIC)
                         startActivity(Intent(this, HomeActivity::class.java))
                         finish()
                         LoginActivity().finish()
@@ -58,10 +58,11 @@ class EmailLoginActivity : AppCompatActivity() {
 
     }
 
-    fun saveUser(user : User){
+    fun saveUser(user : User, provider : ProviderType){
         val sp = getSharedPreferences("user", MODE_PRIVATE)
         sp.edit().putString("userId", user.id).apply()
-        sp.edit().putString("email", user.email.toString()).apply()
+        sp.edit().putString("provider", provider.name).apply()
+        sp.edit().putString("email", user.email).apply()
     }
 
 }
