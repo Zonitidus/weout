@@ -3,13 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-
-        <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/activity_about_us.xml" value="0.3038949275362319" />
-        <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/activity_advertise.xml" value="0.29846014492753625" />
-
         <entry key="..\:/Users/Alejandro Suarez/AndroidStudioProjects/weout/app/src/main/res/layout/activity_facebook_auth.xml" value="0.11574074074074074" />
         <entry key="..\:/Users/Alejandro Suarez/AndroidStudioProjects/weout/app/src/main/res/layout/activity_home.xml" value="0.1814814814814815" />
         <entry key="..\:/Users/Alejandro Suarez/AndroidStudioProjects/weout/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/activity_about_us.xml" value="0.3038949275362319" />
+        <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/activity_advertise.xml" value="0.29846014492753625" />
         <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/activity_email_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/activity_event_map.xml" value="0.29846014492753625" />
         <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/activity_firebase_login.xml" value="0.23958333333333334" />
@@ -26,6 +24,12 @@
         <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/fragment_posts_list.xml" value="0.49583333333333335" />
         <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/layout/image_grid.xml" value="0.33" />
         <entry key="..\:/Users/zonif/OneDrive/Escritorio/Work/SeptimoSemestre/Apps/Practicas/WeOut/app/src/main/res/menu/menu_registered.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable/shapealtbutton.xml" value="0.1046875" />
+        <entry key="app/src/main/res/drawable/shapebutton.xml" value="0.14814814814814814" />
+        <entry key="app/src/main/res/drawable/shapeedittext.xml" value="0.14814814814814814" />
+        <entry key="app/src/main/res/layout/activity_about_us.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_email_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
       </map>
     </option>
   </component>

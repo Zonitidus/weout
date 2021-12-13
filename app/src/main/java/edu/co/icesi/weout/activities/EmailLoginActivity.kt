@@ -23,6 +23,7 @@ class EmailLoginActivity : AppCompatActivity() {
         val view = binding.root
 
         setContentView(view)
+        getSupportActionBar()!!.setTitle("Ingresa con tu correo")
 
         binding.loginBtn.setOnClickListener {
 

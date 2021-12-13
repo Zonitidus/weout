@@ -46,6 +46,7 @@ open class LoginActivity : AppCompatActivity() {
         _binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        getSupportActionBar()?.hide()
 
         binding.emailLoginBtn.setOnClickListener {
 
