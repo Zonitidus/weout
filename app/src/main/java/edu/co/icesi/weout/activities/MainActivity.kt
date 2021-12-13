@@ -31,9 +31,24 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.logoIV.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
+
+            val sp = getSharedPreferences("user", MODE_PRIVATE)
+            val userEmail = sp.getString("email", null)
+
+            if (userEmail == null){
+
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+
+            }else{
+
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
+
+            }
+
         }
     }
 
