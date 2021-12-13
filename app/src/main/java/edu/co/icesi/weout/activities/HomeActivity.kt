@@ -8,19 +8,18 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import edu.co.icesi.weout.R
 import edu.co.icesi.weout.databinding.ActivityHomeBinding
+import edu.co.icesi.weout.fragments.NotificationFragment
+import edu.co.icesi.weout.fragments.PerfilFragment
 import edu.co.icesi.weout.fragments.PostEventFragment
 import edu.co.icesi.weout.fragments.PostsListFragment
-
-enum class ProviderType{
-    FACEBOOK,
-    BASIC
-}
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
     private lateinit var postEventFragment: PostEventFragment
     private lateinit var postsListFragment: PostsListFragment
+    private lateinit var notificationFragment : NotificationFragment
+    private lateinit var perfilFragment: PerfilFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,15 +29,24 @@ class HomeActivity : AppCompatActivity() {
 
         this.postEventFragment  = PostEventFragment.newInstance()
         this.postsListFragment = PostsListFragment()
+        this.notificationFragment = NotificationFragment()
+        this.perfilFragment = PerfilFragment()
 
         binding.bottomNavigationView.setOnItemSelectedListener {
                 menuItem ->
-            if(menuItem.itemId == R.id.publishItem) {
+            if (menuItem.itemId == R.id.publishItem) {
                 showFragment(postEventFragment)
             }
-            if(menuItem.itemId == R.id.homeItem) {
+            if (menuItem.itemId == R.id.homeItem) {
                 showFragment(postsListFragment)
             }
+            if (menuItem.itemId == R.id.notificationItem) {
+                showFragment(notificationFragment)
+            }
+            if (menuItem.itemId == R.id.accountItem) {
+                showFragment(perfilFragment)
+            }
+
             true
         }
         this.showFragment(postsListFragment)

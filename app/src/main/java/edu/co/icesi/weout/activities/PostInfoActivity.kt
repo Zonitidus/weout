@@ -1,13 +1,20 @@
 package edu.co.icesi.weout.activities
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import com.bumptech.glide.Glide
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import edu.co.icesi.weout.R
 import edu.co.icesi.weout.databinding.ActivityPostInfoBinding
+import edu.co.icesi.weout.model.Notification
 import edu.co.icesi.weout.model.Post
+import edu.co.icesi.weout.model.User
 
 class PostInfoActivity : AppCompatActivity() {
 
@@ -69,6 +76,48 @@ class PostInfoActivity : AppCompatActivity() {
 
         binding.volver1Btn.setOnClickListener{
             finish()
+        }
+
+        binding.likeBtn.setOnClickListener {
+
+            Toast.makeText(applicationContext, "You have liked this post!", Toast.LENGTH_SHORT).show()
+
+            val sharedPreferences = getSharedPreferences("user", Context.MODE_PRIVATE)
+            val userId = sharedPreferences.getString("userId", "")
+            val authorId = post.user
+
+            var imgURL = ""
+
+            val query = Firebase.firestore.collection("users").document(userId!!).get()
+            var user : User? = null
+
+            if (post.photos.size > 0) {
+                imgURL = post.photos[0]
+            }
+
+            query.addOnCompleteListener {
+                user = it.result!!.toObject(User::class.java)
+
+                val notificationUser = Notification("${post.id}", "Le has dado me gusta a ${post.eventName}", imgURL, System.currentTimeMillis())
+
+                val notificationAuthor = Notification("${userId}:${post.id}",
+                    "A ${user!!.name} ${user!!.lastName} le gusto tu publicacion ${post.eventName}",
+                    "https://firebasestorage.googleapis.com/v0/b/weout-582de.appspot.com/o/heart.png?alt=media&token=ad7f7a30-5fa5-4323-9669-69222ef53cb9",
+                    System.currentTimeMillis())
+
+                Firebase.firestore.collection("users").document(userId!!)
+                    .collection("likedposts").document(post.id).set(post)
+
+                Firebase.firestore.collection("users").document(authorId).collection("notifications")
+                    .document(notificationAuthor.id).set(notificationAuthor)
+
+                Firebase.firestore.collection("users").document(userId).collection("notifications")
+                    .document(notificationUser.id).set(notificationUser)
+
+            }
+
+
+
         }
 
 
